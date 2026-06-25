@@ -7,7 +7,7 @@ st.set_page_config(page_title="UPI Failure Intelligence", layout="wide")
 st.title("🔴 UPI Payment Failure Intelligence System")
 st.markdown("**Identifying and quantifying payment failure patterns across bank corridors**")
 
-conn = sqlite3.connect('/Users/saitejabollikonda/Downloads/upi_project.db')
+conn = sqlite3.connect('upi_project.db')
 df = pd.read_sql_query("SELECT * FROM upi_transactions", conn)
 conn.close()
 
